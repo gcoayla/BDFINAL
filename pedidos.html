@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mesas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css?v1.3">
+        <script src="js/pedidos.js?v1.3"></script>
+    </head>
+    <body>
+        <header>
+            <a id="btmenu" onclick="cancelar()">Pedidos</a>
+        </header>
+        <div id="contenido">
+            <div id="pedidos">
+                <div id="idmesa"><h3>Mesa #2</h3></div>
+                <div id="pedidosrealizados">
+                    <div id="nombrepedido">Pedidos realizados</div>
+                    <div id="cantidadpedido">Cantidad</div>
+                    <div id="cajapedido">
+                        <div id="infopedido">
+                            <h2>Lomo saltado</h2>
+                        </div>
+                        <div id="cantidadpedido">
+                            <div id="cantidad">2</div>
+                        </div>
+                    </div>
+                    <div id="cajapedido">
+                        <div id="infopedido">
+                            <h2>Aji de gallina</h2>
+                        </div>
+                        <div id="cantidadpedido">
+                            <div id="cantidad">3</div>
+                        </div>
+                    </div>
+                    <div id="cajapedido">
+                        <div id="infopedido">
+                            <h2>Caldo blanco</h2>
+                        </div>
+                        <div id="cantidadpedido">
+                            <div id="cantidad">1</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="pedidosarealizar">
+                    <div id="pedidosrealizados">
+                    <div id="nombrepedido">Pedidos a realizar</div>
+                    <div id="cantidadpedido">Cantidad</div>
+                    <div id="cajapedido">
+                        <div id="infopedido">
+                            <h2>Lomo saltado</h2>
+                        </div>
+                        <div id="cantidadpedido">
+                            <div class="cant-box" onclick="mas(1)">-</div>
+                            <div id="cantidad1" class="cant-box">1</div>
+                            <div class="cant-box" onclick="menos(1)">+</div>
+                            <div class="cant-box elim-box" onclick="elim(1)">B</div>
+                        </div>
+                    </div>
+                    <div id="cajapedido">
+                        <div id="infopedido">
+                            <h2>Lomo saltado</h2>
+                        </div>
+                        <div id="cantidadpedido">
+                            <div class="cant-box" onclick="mas(1)">-</div>
+                            <div id="cantidad1" class="cant-box">1</div>
+                            <div class="cant-box" onclick="menos(1)">+</div>
+                            <div class="cant-box elim-box" onclick="elim(1)">B</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="enviarpedidos">Realizar pedido</div>
+            </div>
+        </div>
+            <div id="menurest">
+                <div id="categorias">
+                    <div class="cajacategoria" onclick="mostrar(1)">Entradas</div>
+                    <div class="cajacategoria" onclick="mostrar(2)">Sopas</div>
+                    <div class="cajacategoria" onclick="mostrar(3)">Segundos</div>
+                    <div class="cajacategoria" onclick="mostrar(4)">Postres</div>
+                    <div class="cajacategoria" onclick="mostrar(5)">Bebidas</div>
+                </div>
+                <div id="entrada" class="listacat">
+                    <div class="objlista" onclick="agregar(1)">
+                        <div class="tituloplato">Lomo saltado</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Aji de gallina</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Papa a la huancaina</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Cuy chactado</div>
+                    </div>       
+                </div>
+                <div id="sopa"class="listacat">
+                    <div class="objlista">
+                        <div class="tituloplato">Lomo saltado</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Aji de gallina</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Papa a la huancaina</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Cuy chactado</div>
+                    </div>       
+                </div>
+                <div id="segundo" class="listacat">
+                    <div class="objlista">
+                        <div class="tituloplato">Lomo saltado</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Aji de gallina</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Papa a la huancaina</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Cuy chactado</div>
+                    </div>       
+                </div>
+                <div id="postre" class="listacat">
+                    <div class="objlista">
+                        <div class="tituloplato">Lomo saltado</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Aji de gallina</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Papa a la huancaina</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Cuy chactado</div>
+                    </div>       
+                </div>
+                <div id="bebida" class="listacat">
+                    <div class="objlista">
+                        <div class="tituloplato">Lomo saltado</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Aji de gallina</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Papa a la huancaina</div>
+                    </div>
+                    <div class="objlista">
+                        <div class="tituloplato">Cuy chactado</div>
+                    </div>       
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
