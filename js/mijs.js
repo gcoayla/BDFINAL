@@ -22,7 +22,7 @@ function mesa(codigo){
     }
 };
 $(document).ready(function() {
-        document.cookie = "mesero=999";
+        document.cookie = "mesero=1";
         $.ajax({
             type: "POST",
             url: 'php/carga-mesas.php',
@@ -44,7 +44,7 @@ $(document).ready(function() {
                 if($("#datos").attr("exito")==1){
                     document.cookie = "mesero="+$("#datos").attr("codigo");
                 }else if($("#datos").attr("exito")==0){
-                    document.cookie = "mesero=999";
+                    document.cookie = "mesero=1";
                 }
            }
        });
