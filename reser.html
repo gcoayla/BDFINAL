@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mesas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/estilosprinci.css?v1.0">
+        <script src="js/princi.js?v1.2"></script>
+    </head>
+    <body>
+        <header>
+            <ul id="menu">
+                <li onclick="$(location).attr('href','princi.html');">INICIO</li>
+                <li onclick="verificar()">RESERVAS</li>
+                <li onclick="$(location).attr('href','regis.html');">LOGIN</li>
+            </ul>
+        </header>
+        <section>
+            <article>
+                <form id="reserva" class="formulario">
+                    <h3>Reservas</h3>
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" name="fecha">
+                    <label for="hora">Hora:</label>
+                    <input type="time" name="hora">
+                    <label for="nume">Numero de comensales:</label>
+                    <input type="number" name="nume">
+                    <input type="submit" value="Registrarme">
+                </form>
+                <div id="respuestalogin"></div>
+            </article>
+        </section>
+    </body>
+</html>

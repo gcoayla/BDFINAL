@@ -31,6 +31,23 @@ function mostrar(numero){
                 $( "#bebida" ).css( "display", "block" );
             }
         };
+function cerrar(){
+        var parametros = {
+                "Cod" : "hola"
+        };
+        $.ajax({
+            type: "POST",
+            url: 'php/cerrar-mesa.php',
+            data:  parametros,
+            success: function(response)
+            {   
+                if(response=="error"){
+                    alert("Error de servidor");
+                }
+                $(location).attr('href','index.html');
+           }
+       });
+};
 function getCookie(cname) {
   var name = cname + "=";
   var decodedCookie = decodeURIComponent(document.cookie);

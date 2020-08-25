@@ -1,5 +1,6 @@
 function mesa(codigo){
     var factura =$("#codigo"+codigo).attr("fact");
+    document.cookie = "mesa="+codigo;
     if(factura == "vacio"){
         var parametros = {
                 "Cod" : codigo
@@ -9,14 +10,12 @@ function mesa(codigo){
             url: 'php/ocupar-mesa.php',
             data:  parametros,
             success: function(response)
-            {
-                document.cookie = "mesa="+codigo;
+            { 
                 document.cookie = "factura="+response;
                 $(location).attr('href','pedidos.html');
            }
        });
     }else if(factura != "vacio"){
-        document.cookie = "mesa="+codigo;
         document.cookie = "factura="+factura;
         $(location).attr('href','pedidos.html');
     }

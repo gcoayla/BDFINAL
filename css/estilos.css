@@ -83,6 +83,10 @@ h3{
     margin-top: 15px;
     margin-bottom: 15px;
 }
+h4{
+    font-size: 24px;
+    padding: 10px 20px;
+}
 #contenido{
     width: 80%;
     margin: 0 auto;
@@ -163,7 +167,7 @@ h3{
     float: left;
     overflow: hidden;
 }
-#pedidosrealizados{
+.caja-pepdidosr{
     width: 90%;
     margin: 0 auto;
     border:0.5px solid #192A40;
@@ -215,9 +219,9 @@ cantidadpedido{
 #pedidosarealizar{
     margin-top: 20px;
 }
-#enviarpedidos{
+.caja-enviar{
     width: 50%;
-    margin: 0 auto;
+    margin: 10px auto;
     margin-top: 20px;
     border: 1px solid #192A40;
     border-radius: 15px;
@@ -226,7 +230,7 @@ cantidadpedido{
     font-size: 30px;
     padding-top: 5px;
 }
-#enviarpedidos:hover{
+.caja-enviar:hover{
     cursor: pointer;
 }
 #menurest{
@@ -287,6 +291,11 @@ cantidadpedido{
 #bebida{
     display: none;
 }
-
-/* Footer */
-
+table, th, td {
+  border: 1px solid black;
+}
+/* Info */
+.informacion{
+    width: 90%;
+    margin: 0 auto;
+}

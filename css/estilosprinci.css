@@ -1,0 +1,113 @@
+/* Neutralidad */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Colores */
+/* Fuente */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* Menu */
+body{
+    font-family: 'Abril Fatface', cursive;
+}
+header{
+    height: 10vh;
+    background-color: #2F2F2F;
+    color white;
+}
+header ul{
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+li{
+    width: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+}
+li:hover{
+    cursor: pointer;
+}
+section{
+    height: 90vh;
+    background-color: #666666;
+    color: white;
+    background-image: url(../images/fondo.jpg);
+    background-size: cover;
+    -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(30%);
+}
+h1{
+    font-size: 11vw;
+    padding-top: 35vh;
+    width: 100%;
+    text-align: center;
+}
+h2{
+    font-size: 4vw;
+    margin-top: 5hvh;
+    width: 100%;
+    text-align: center;
+}
+h3{
+    color: yellow;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2.5vw;
+}
+article{
+    height: 90vh;
+    width: 70%;
+    padding: 0 15%;
+    margin: 0 auto;
+    background-color:rgba(100,100,100,0.8);
+}
+/* Formulario */
+.formulario{
+    overflow: hidden;
+    width: 80%;
+    padding: 20px 10%;
+}
+.formulario label{
+    font-size: 1.5vw;
+    display: block;
+}
+.formulario input{
+    width: 80%;
+    height: 25px;
+    display: block;
+    font-size: 20px;
+    margin:10px auto;
+    border:1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    -webkit-box-shadow: 6px 6px 6px 1px rgba(0,0,0,0.12);
+    -moz-box-shadow: 6px 6px 6px 1px rgba(0,0,0,0.12);
+    box-shadow: 6px 6px 6px 1px rgba(0,0,0,0.12);
+}
+.cajacambiar{
+    color:yellow;
+    width: 80%;
+    text-align: right;
+    padding: 10px 10%;
+}
+.cajacambiar:hover{
+    cursor: pointer;
+}
+#registro{
+    display: none;
+}
+#respuestalogin{
+    color:red;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+

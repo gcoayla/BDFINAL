@@ -6,12 +6,14 @@ $factura = $_COOKIE['factura'];
 echo '<div id="nombrepedido">Pedidos realizados</div>
                     <div id="cantidadpedido">Cantidad</div>';
 if( $conn ) {
+    if ( sqlsrv_begin_transaction( $conn ) === false ) {
+     die( print_r( sqlsrv_errors(), true ));
+    }
     $qry = "select l.nombre 'Nom', p.cantidad 'Cant'
             from factura f
             inner join pedido p on p.id_factura_factura = f.id_factura
             inner join platillo l on p.id_platillo = l.id_platillo
-            where f.id_factura= ".$factura."
-            group by f.id_factura;";
+            where f.id_factura= ".$factura.";";
     $res = sqlsrv_query( $conn, $qry);
     $row_count=false;
     if($res){
@@ -34,6 +36,11 @@ if( $conn ) {
         }
     }else{
         echo "<h3>No se realizo ningun pedido</h3>";
+    }
+    if($res){
+        sqlsrv_commit( $conn );
+    }else{
+        sqlsrv_rollback( $conn );
     }
 }else{
      echo "Conexión no se pudo establecer.<br />";

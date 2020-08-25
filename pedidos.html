@@ -5,17 +5,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="js/jquery-3.5.1.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/estilos.css?v1.3">
-        <script src="js/pedidos.js?v1.3"></script>
+        <link rel="stylesheet" type="text/css" href="css/estilos.css?v1.4">
+        <script src="js/pedidos.js?v1.8"></script>
     </head>
     <body>
         <header>
-            <a id="btmenu" onclick="cancelar()">Pedidos</a>
+            <a id="btmenu" href="index.html">Pedidos</a>
         </header>
         <div id="contenido">
             <div id="pedidos">
                 <div id="idmesa"><h3>Mesa #2</h3></div>
-                <div id="pedidosrealizados">
+                <div id="pedidosrealizados" class="caja-pepdidosr">
                     <div id="nombrepedido">Pedidos realizados</div>
                     <div id="cantidadpedido">Cantidad</div>
                     <div id="cajapedido">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div id="pedidosarealizar">
-                    <div id="pedidosrealizados">
+                    <div id="pedidosarealizarbox" class="caja-pepdidosr">
                     <div id="nombrepedido">Pedidos a realizar</div>
                     <div id="cantidadpedido">Cantidad</div>
                     <div id="cajapedido">
@@ -70,7 +70,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="enviarpedidos">Realizar pedido</div>
+                <div id="enviarpedidos" class="caja-enviar">Realizar pedido</div>
+                <div id="cerrarmesa" class="caja-enviar" onclick="cerrar()">Cerrar mesa</div>
             </div>
         </div>
             <div id="menurest">

@@ -10,6 +10,9 @@ echo '<div id="categorias">
                     <div class="cajacategoria" onclick="mostrar(5)">Bebidas</div>
                 </div>';
 if( $conn ) {
+    if ( sqlsrv_begin_transaction( $conn ) === false ) {
+     die( print_r( sqlsrv_errors(), true ));
+    }
     echo '<div id="entrada" class="listacat">';
     $qry = "select p.nombre 'Nombre', p.id_platillo 'Codigo'
 		from platillo p
@@ -80,6 +83,11 @@ if( $conn ) {
                     </div>';
     }
     echo '</div>';
+    if($res){
+        sqlsrv_commit( $conn );
+    }else{
+        sqlsrv_rollback( $conn );
+    }
 }else{
      echo "Conexión no se pudo establecer.<br />";
      die( print_r( sqlsrv_errors(), true));
